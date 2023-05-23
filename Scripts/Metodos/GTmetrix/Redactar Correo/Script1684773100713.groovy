@@ -17,11 +17,6 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-WebUI.callTestCase(findTestCase('Metodos/GTmetrix/Ir a GTmetrix'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Metodos/GTmetrix/Iniciar sesion'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Metodos/GTmetrix/Analizar URL'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.callTestCase(findTestCase('Metodos/GTmetrix/Monitoreo'), [:], FailureHandling.STOP_ON_FAILURE)
+CustomKeywords.'com.testwithhari.katalon.plugins.Gmail.sendEmail'('luis.floresn46@gmail.com', 'llcqgmdialadhuwh', 'luflores@ts4.mx', 
+    'GTmetrix', 'Este es un correo de prueba')
 

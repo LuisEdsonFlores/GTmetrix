@@ -19,3 +19,17 @@ import org.openqa.selenium.Keys as Keys
 
 WebUI.click(findTestObject('GTmetrix web/btn_downloadPdf'))
 
+WebUI.click(findTestObject('GTmetrix web/input_RegularReport'))
+
+WebUI.click(findTestObject('GTmetrix web/btn_downloadReport'))
+
+WebUI.click(findTestObject('GTmetrix web/a_cerrarDowload'))
+
+String PorcentajePerformace = ''
+
+PorcentajePerformace = WebUI.getText(findTestObject('GTmetrix web/span_porcentaje'))
+
+if (PorcentajePerformace <= '20%') {
+    WebUI.callTestCase(findTestCase('Metodos/GTmetrix/Redactar Correo'), [:], FailureHandling.STOP_ON_FAILURE)
+}
+
